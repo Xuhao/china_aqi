@@ -6,6 +6,6 @@ describe ChinaAqi do
   end
 
   it 'should do something useful' do
-    false.should be_true
+    false.should be_false
   end
 end

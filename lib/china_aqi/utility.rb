@@ -1,4 +1,5 @@
 require 'httparty'
+require 'active_support/core_ext/class/attribute'
 module ChinaAqi
   module Utility
     extend ActiveSupport::Concern

@@ -1,14 +1,14 @@
 # ChinaAqi
 
+[![Build Status](https://travis-ci.org/Xuhao/china_aqi.png?branch=master)](https://travis-ci.org/Xuhao/china_aqi)
+
 China Air Quality Index API for Rails.
 
 Thanks [pm25.in][pm25_in] for provide all the AQI sources for us as free, all the data is form China's official sector. it's a reall gread work!
 
 ChinaAqi gem provide some interface base on Ruby On Rails, before to use it, you need ask for a token form [pm25.in][pm25_in_api].
 
-All monitoring stations in most cities of China are available.
-
-Most AQI data are available, they are:
+All monitoring stations in most cities of China are available, most AQI data are available, they are:
 
   - **co**: 一氧化碳
   - **no2**: 二氧化氮

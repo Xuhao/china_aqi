@@ -6,6 +6,17 @@ Thanks [pm25.in][pm25_in] for provide all the AQI sources for us as free, all th
 
 ChinaAqi gem provide some interface base on Ruby On Rails, before to use it, you need ask for a token form [pm25.in][pm25_in_api].
 
+All monitoring stations in most cities of China are available.
+
+Most AQI data are available, they are:
+
+  - **co**: 一氧化碳
+  - **no2**: 二氧化氮
+  - **o3**: 臭氧
+  - **pm10**: 颗粒物（粒径小于等于10μm）
+  - **pm2.5**: 颗粒物（粒径小于等于2.5μm）
+  - **so2**: 二氧化硫
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -32,17 +43,6 @@ As we mention at the beginning, we must get a token form [pm25.in][pm25_in_api] 
 
 Once you get the token, put it in config/initializers/china_aqi.rb, then enjoy!
 
-Most AQI data are available, they are:
-
-  - **co**: 一氧化碳
-  - **no2**: 二氧化氮
-  - **o3**: 臭氧
-  - **pm10**: 颗粒物（粒径小于等于10μm）
-  - **pm2.5**: 颗粒物（粒径小于等于2.5μm）
-  - **so2**: 二氧化硫
-
-All monitoring stations in most cities of China are available.
-
 ### Examples
 
     # City name can be Chinese characters, pinyin and area code
@@ -53,7 +53,6 @@ All monitoring stations in most cities of China are available.
     shanghai = ChinaAqi::PM25.new('上海')  # #<ChinaAqi::PM25:0x007fe2a631aef8 @city="上海" ...
     shanghai.get                          # [{"aqi"=>74, "area"=>"上海", "pm2_5"=>48 ...
     ChinaAqi::PM25.new('021', avg: true, stations: :yes).get # Same as above.
-
 
     # Get so2 data for Shanghai
     ChinaAqi::SO2.new('shanghai', avg: true, stations: :no).get # [{"aqi"=>74, "area"=> ...

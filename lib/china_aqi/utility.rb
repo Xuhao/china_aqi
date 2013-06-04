@@ -9,7 +9,7 @@ module ChinaAqi
 
     included do
       include HTTParty
-      attr_accessor :parmas, :token
+      attr_accessor :parmas
       class_attribute :base_uri, :method
       self.base_uri = URI::HTTP.build({host: 'www.pm25.in'})
     end

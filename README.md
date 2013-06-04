@@ -61,53 +61,55 @@ shanghai = ChinaAqi::CO.new('上海', avg: true, stations: :yes) # same as China
 # => #<ChinaAqi::CO:0x007fbf9d953238 @city="021", @parmas={:avg=>true ...
 shanghai.get
 # => [{"aqi"=>57, "area"=>"上海", "co"=>0.0, "co_24h"=>0.0, "position_name"=>"普陀", "primary_pollutant" ...
+ChinaAqi::CO.get('上海', avg: true, stations: :yes) # => Same as above
 ```
 
 ##### NO2: 二氧化氮
 
 ```ruby
-ChinaAqi::NO2.new('021').get
+ChinaAqi::NO2.new('021').get  # or ChinaAqi::NO2.get('021')
 # => [{"aqi"=>57, "area"=>"上海", "no2"=>0, "no2_24h"=>0, "position_name"=>"普陀", "primary_pollutant" ...
+
 ```
 
 ##### O3: 臭氧
 
 ```ruby
-ChinaAqi::O3.new('shanghai').get
+ChinaAqi::O3.new('shanghai').get  # or ChinaAqi::O3.get('shanghai')
 # => [{"aqi"=>57, "area"=>"上海", "o3"=>0, "o3_24h"=>0, "o3_8h"=>0, "o3_8h_24h"=>0, "position_name" ...
 ```
 
 ##### PM10: 颗粒物（粒径小于等于10μm）
 
 ```ruby
-ChinaAqi::PM10.new('上海').get
+ChinaAqi::PM10.new('上海').get  # or ChinaAqi::PM10.get('上海')
 # => [{"aqi"=>57, "area"=>"上海", "pm10"=>55, "pm10_24h"=>64, "position_name"=>"普陀", "primary_pollutant" ...
 ```
 ##### PM2.5: 颗粒物（粒径小于等于2.5μm）
 
 ```ruby
-ChinaAqi::PM25.new('shanghai').get
+ChinaAqi::PM25.new('shanghai').get  # or ChinaAqi::PM25.get('shanghai')
 # => [{"aqi"=>57, "area"=>"上海", "pm2_5"=>21, "pm2_5_24h"=>38, "position_name"=>"普陀", "primary_pollutant" ...
 ```
 
 ##### SO2: 二氧化硫
 
 ```ruby
-ChinaAqi::SO2.new('shanghai').get
+ChinaAqi::SO2.new('shanghai').get  # or ChinaAqi::SO2.get('shanghai')
 # => [{"aqi"=>57, "area"=>"上海", "so2"=>0, "so2_24h"=>0, "position_name"=>"普陀", "primary_pollutant" ...
 ```
 
 ##### Simple data for all monitoring stations in one city
 
 ```ruby
-ChinaAqi::City.new('shanghai').get
+ChinaAqi::City.new('shanghai').get  # or ChinaAqi::City.get('shanghai')
 # => [{"aqi"=>57, "area"=>"上海", "so2"=>0, "so2_24h"=>0, "position_name"=>"普陀", "primary_pollutant" ...
 ```
 
 ##### Detail data for all monitoring stations in one city
 
 ```ruby
-ChinaAqi::CityPro.new('shanghai').get
+ChinaAqi::CityPro.new('shanghai').get  # or ChinaAqi::CityPro.get('shanghai')
 # => [{"aqi"=>57, "area"=>"上海", "co"=>0.0, "co_24h"=>0.0, "no2"=>0, "no2_24h"=>0, ...
 ```
 
@@ -136,6 +138,8 @@ ChinaAqi::Ranking.get
 ChinaAqi.get_stations_for_city('上海')
 ChinaAqi.get_stations_for_city('shanghai')
 ChinaAqi.get_stations_for_city('021')
+# same as:
+ChinaAqi::CityStations.get('上海/shanghai/021')
 # {"city"=>"上海", "stations"=>[{"station_name"=>"普陀" ..
 ```
 

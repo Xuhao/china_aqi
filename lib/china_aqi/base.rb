@@ -5,6 +5,11 @@ module ChinaAqi
   # Pass city name and params those API accept.
   #
   #  shanghai = ChinaAqi::PM25.new('city_name', params = { avg: true/false, stations: :yes/:no })
+  #  shanghai.get
+  #
+  # this is same as:
+  #
+  #  ChinaAqi::PM25.get('city_name', params = { avg: true/false, stations: :yes/:no })
   #
   #  params:
   #    avg: if true,return average for all monitoring stations, default is true
@@ -16,6 +21,7 @@ module ChinaAqi
   #
   #     shanghai = ChinaAqi::PM25.new('上海')  # #<ChinaAqi::PM25:0x007fe2a631aef8 @city="上海"...
   #     shanghai.get                           # [{"aqi"=>74, "area"=>"上海", "pm2_5"=>48,...
+  #     ChinaAqi::PM25.get('shanghai')  # Same as above
   #
   #     # Get so2 data for 上海
   #     ChinaAqi::SO2.new('上海', avg: false, stations: :no).get  # [{"aqi"=>74, "area"=>"上海", "pm2_5"=>48,...
@@ -29,9 +35,15 @@ module ChinaAqi
 
   class Base
     include ChinaAqi::Utility
+    attr_accessor :token
 
     def initialize(*args)
       raise TokenMissingError, 'Token is missing, run "rails g china_aqi:install" and set token in config/initializers/china_aqi.rb' unless ChinaAqi.token
+      @token = ChinaAqi.token
+    end
+
+    def self.get(*args)
+      self.new(*args).get
     end
   end
 
@@ -43,7 +55,6 @@ module ChinaAqi
       super
       @city = city
       @parmas = querys.merge(city: city, token: ChinaAqi.token)
-      @token = ChinaAqi.token
     end
   end
 
@@ -51,12 +62,7 @@ module ChinaAqi
   class StaticBase < Base
     def initialize
       super
-      @token = ChinaAqi.token
       @parmas = { token: ChinaAqi.token }
-    end
-
-    def self.get
-      self.new.get
     end
   end
 end

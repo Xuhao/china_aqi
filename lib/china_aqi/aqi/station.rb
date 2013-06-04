@@ -17,7 +17,7 @@ module ChinaAqi
     attr_accessor :station_code
 
     def initialize(station_code)
-      raise TokenMissingError, 'Token is missing, please set token first!' if ChinaAqi.token.blank?
+      super
       @station_code = station_code
       @token = ChinaAqi.token
       @parmas = { station_code: station_code, token: ChinaAqi.token }

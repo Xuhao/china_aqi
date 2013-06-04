@@ -26,28 +26,51 @@ module ChinaAqi
   #     # Get all data that the API provide
   #     ChinaAqi::Global.new.get
   #
+
   class Base
     include ChinaAqi::Utility
 
+    def initialize(*args)
+      raise TokenMissingError, 'Token is missing, run "rails g china_aqi:install" and set token in config/initializers/china_aqi.rb' unless ChinaAqi.token
+    end
+  end
+
+  # APIs with some parameters
+  class DynamicBase < Base
     attr_accessor :city
 
     def initialize(city, querys = {avg: true, stations: :yes})
-      raise TokenMissingError, 'Token is missing, please set token first!' if ChinaAqi.token.blank?
+      super
       @city = city
       @parmas = querys.merge(city: city, token: ChinaAqi.token)
       @token = ChinaAqi.token
     end
   end
+
+  # APIs without any parameters
+  class StaticBase < Base
+    def initialize
+      super
+      @token = ChinaAqi.token
+      @parmas = { token: ChinaAqi.token }
+    end
+
+    def self.get
+      self.new.get
+    end
+  end
 end
 
-require 'china_aqi/aqi/city'
-require 'china_aqi/aqi/city_pro'
-require 'china_aqi/aqi/co'
-require 'china_aqi/aqi/global'
-require 'china_aqi/aqi/no2'
-require 'china_aqi/aqi/o3'
-require 'china_aqi/aqi/pm10'
-require 'china_aqi/aqi/pm25'
-require 'china_aqi/aqi/ranking'
-require 'china_aqi/aqi/so2'
+require 'china_aqi/aqi/dynamic/city'
+require 'china_aqi/aqi/dynamic/city_pro'
+require 'china_aqi/aqi/dynamic/co'
+require 'china_aqi/aqi/dynamic/no2'
+require 'china_aqi/aqi/dynamic/o3'
+require 'china_aqi/aqi/dynamic/pm10'
+require 'china_aqi/aqi/dynamic/pm25'
+require 'china_aqi/aqi/dynamic/so2'
+
+require 'china_aqi/aqi/static/global'
+require 'china_aqi/aqi/static/ranking'
+
 require 'china_aqi/aqi/station'

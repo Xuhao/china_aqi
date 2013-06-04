@@ -1,5 +1,5 @@
 module ChinaAqi
-  class CO < Base
+  class CO < DynamicBase
     self.method = :co
   end
 end

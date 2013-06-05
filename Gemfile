@@ -5,3 +5,4 @@ source 'http://ruby.taobao.org'
 gemspec
 
 gem 'rake', group: :test
+gem 'coveralls', require: false

@@ -1,7 +1,12 @@
 class ChinaAqi::InstallGenerator < Rails::Generators::Base
-  source_root File.expand_path('../templates', __FILE__)
-
-  def copy_china_aqi_file
-    copy_file "china_aqi.rb", "config/initializers/china_aqi.rb"
+  def append_token_config
+    application "config.china_aqi_token = 'you_token_here'"
+    puts ''
+    puts '-' * 66
+    puts "Find below line in config/application.rb:\n\n"
+    puts "    config.china_aqi_token = 'you_token_here'\n\n"
+    puts "Put your token."
+    puts '-' * 66
+    puts ''
   end
 end

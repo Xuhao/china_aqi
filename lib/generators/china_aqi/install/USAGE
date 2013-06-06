@@ -1,8 +1,9 @@
 Description:
-    Generate china_aqi.rb file to config/initializers/ directory. This file is used for set customer token for PM25.in
+    Append china_aqi_token config to config/application.rb, This file is used for set customer token for PM25.in
 
 Example:
     rails g china_aqi:install
 
-    This will create:
-        config/initializers/china_aqi.rb
+    This will append below line to config/application.rb:
+
+        config.china_aqi_token = 'you_token_here'

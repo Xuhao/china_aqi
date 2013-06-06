@@ -38,7 +38,20 @@ module ChinaAqi
     attr_accessor :token
 
     def initialize(*args)
-      raise TokenMissingError, 'Token is missing, run "rails g china_aqi:install" and set token in config/initializers/china_aqi.rb' unless ChinaAqi.token
+      raise TokenMissingError, %~
+        #{'*' * 66}
+        Token is missing!
+
+        Set token as below:
+
+          ChinaAqi.token = "you_token"
+
+        If you use it under Rails, set token as normal rails configuration:
+
+          # config/application.rb
+          config.china_aqi_token = "you_token"
+
+        #{'*' * 66}~ unless ChinaAqi.token
       @token = ChinaAqi.token
     end
 

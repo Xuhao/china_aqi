@@ -33,13 +33,17 @@ Run install generator:
 
     $ rails generate china_aqi:install
 
-It will create file: config/initializers/china_aqi.rb
+It will add a new line in config/application.rb:
+
+```ruby
+config.china_aqi_token = 'you_token_here'
+```
+
+Put you token there.
 
 ## Usage
 
 As we mention at the beginning, we must get a token form [pm25.in][pm25_in_api] before we use their APIs, it's free!
-
-Once you get the token, put it in config/initializers/china_aqi.rb, then enjoy!
 
 ### Parameters
 

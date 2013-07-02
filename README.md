@@ -1,8 +1,9 @@
 # ChinaAqi
 
- [![Gem Version](https://badge.fury.io/rb/china_aqi.png)](http://badge.fury.io/rb/china_aqi)
- [![Build Status](https://travis-ci.org/Xuhao/china_aqi.png?branch=master)](https://travis-ci.org/Xuhao/china_aqi)
- [![Code Climate](https://codeclimate.com/github/Xuhao/china_aqi.png)](https://codeclimate.com/github/Xuhao/china_aqi)
+[![Gem Version](https://badge.fury.io/rb/china_aqi.png)](http://badge.fury.io/rb/china_aqi)
+[![Build Status](https://travis-ci.org/Xuhao/china_aqi.png?branch=master)](https://travis-ci.org/Xuhao/china_aqi)
+[![Code Climate](https://codeclimate.com/github/Xuhao/china_aqi.png)](https://codeclimate.com/github/Xuhao/china_aqi)
+[![Coverage Status](https://coveralls.io/repos/Xuhao/china_aqi/badge.png?branch=master)](https://coveralls.io/r/Xuhao/china_aqi?branch=master)
 
 China Air Quality Index API for Ruby. Thanks [pm25.in][pm25_in] for provide all the AQI sources for us as free, all the data is form China's official sector. it's a reall gread work! ChinaAqi gem provide some interface base on Ruby On Rails, before to use it, you need ask for a token form [pm25.in][pm25_in_api].
 

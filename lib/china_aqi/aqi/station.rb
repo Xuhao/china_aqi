@@ -7,11 +7,11 @@ module ChinaAqi
   #
   # same as:
   #
-  #   ChinaAqi::CityStations.get(station_code)
+  #   ChinaAqi::Station.get(station_code)
   #
   # You can get all station codes for one city like this:
   #
-  #   ChinaAqi::CityStations.new(station_code).get
+  #   ChinaAqi::Station.new(station_code).get
   #
   # or like this:
   #
@@ -19,7 +19,7 @@ module ChinaAqi
   #
   # and like this:
   #
-  #   ChinaAqi::CityStations.get(city)
+  #   ChinaAqi::Station.get(city)
   class Station < Base
     self.method = :aqis_by_station
     attr_accessor :station_code

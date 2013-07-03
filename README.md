@@ -117,6 +117,14 @@ ChinaAqi::CityPro.new('shanghai').get  # or ChinaAqi::CityPro.get('shanghai')
 # => [{"aqi"=>57, "area"=>"上海", "co"=>0.0, "co_24h"=>0.0, "no2"=>0, "no2_24h"=>0, ...
 ```
 
+##### Detail data for one monitoring station
+
+```ruby
+ChinaAqi::Station.new('1141A').get  # or ChinaAqi::Station.get('1141A')
+# => [{"aqi"=>57, "area"=>"上海", "co"=>0.0, "co_24h"=>0.0, "no2"=>0, "no2_24h"=>0, ...
+```
+
+
 ##### Fetch all data
 
 ```ruby

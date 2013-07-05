@@ -14,12 +14,6 @@ module ChinaAqi
       self.base_uri = URI::HTTP.build({host: 'www.pm25.in'})
     end
 
-    module ClassMethods
-      def get(*args)
-        self.new(*args).get
-      end
-    end
-
     def get
       ::ActiveSupport::JSON.decode(HTTParty.get(url).body)
     end

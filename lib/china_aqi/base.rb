@@ -54,6 +54,10 @@ module ChinaAqi
         #{'*' * 66}~ unless ChinaAqi.token
       @token = ChinaAqi.token
     end
+
+    def self.get(*args)
+      self.new(*args).get
+    end
   end
 
   # APIs with some parameters

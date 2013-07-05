@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe ChinaAqi do
   shared_examples "common examples" do |klass, obj|
     it 'should return URI::HTTP object own context when call "uri" method' do

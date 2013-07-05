@@ -3,8 +3,6 @@ require 'spec_helper'
 describe ChinaAqi do
   before(:each) { ChinaAqi.token = '5j1znBVAsnSf5xQyNQyq' }
 
-  ChinaAqi.token = '5j1znBVAsnSf5xQyNQyq'
-
   describe ChinaAqi::City do
     include_examples "common dynamic examples", ChinaAqi::City
     include_examples "class attribute", ChinaAqi::City, :only_aqi

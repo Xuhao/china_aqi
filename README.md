@@ -17,6 +17,11 @@ All monitoring stations in most cities of China are available, most AQI data are
   - **PM2.5**: 颗粒物（粒径小于等于2.5μm）
   - **SO2**: 二氧化硫
 
+### Chinese PM2.5 reporting from U.S. Consulate
+
+About PM2.5 reporting from U.S. Consulate please check out: [pm25
+](https://github.com/ekohe/pm25)
+
 ## Installation
 
 Add this line to your application's Gemfile:

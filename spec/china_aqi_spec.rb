@@ -1,15 +1,15 @@
 require 'spec_helper'
 
 describe ChinaAqi do
-  before(:each) { ChinaAqi.token = nil }
+  before { described_class.token = nil }
 
-  it 'should have a version number' do
-    ChinaAqi::VERSION.should_not be_nil
+  it 'have a version number' do
+    expect(ChinaAqi::VERSION).not_to be_nil
   end
 
-  it 'should return token which defined in rails application configuration file.' do
+  it 'return token which defined in rails application configuration file.' do
     stub_const('Rails', Module.new)
-    Rails.stub_chain('application.config.china_aqi_token') { 'chian_aqi_token_test_sample' }
-    ChinaAqi.token.should eq('chian_aqi_token_test_sample')
+    allow(Rails).to receive_message_chain('application.config.china_aqi_token') { 'chian_aqi_token_test_sample' }
+    expect(described_class.token).to eq('chian_aqi_token_test_sample')
   end
 end

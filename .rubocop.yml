@@ -1,0 +1,60 @@
+require: rubocop-rspec
+
+AllCops:
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  TargetRubyVersion: 2.3
+  Exclude:
+    - "bin/*"
+    - "tmp/**/*"
+    - Gemfile
+    - Guardfile
+    - Rakefile
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/LineLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 12
+
+Style/BarePercentLiterals:
+  EnforcedStyle: percent_q
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/DoubleNegation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/SpaceAroundEqualsInParameterDefault:
+  EnforcedStyle: no_space
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Style/TrivialAccessors:
+  AllowPredicates: true
+
+Style/AsciiComments:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/MessageChain:
+  Enabled: false
+
+RSpec/DescribedClass:
+  Enabled: false

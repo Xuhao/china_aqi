@@ -1,7 +1,7 @@
 require 'china_aqi/utility'
 module ChinaAqi
   # Fetch data with different method
-  # 
+  #
   # Pass city name and params those API accept.
   #
   #  shanghai = ChinaAqi::PM25.new('city_name', params = { avg: true/false, stations: :yes/:no })
@@ -37,8 +37,8 @@ module ChinaAqi
     include ChinaAqi::Utility
     attr_accessor :token
 
-    def initialize(*args)
-      raise TokenMissingError, %~
+    def initialize(*_)
+      raise TokenMissingError, %Q(
         #{'*' * 66}
         Token is missing!
 
@@ -51,12 +51,12 @@ module ChinaAqi
           # config/application.rb
           config.china_aqi_token = "you_token"
 
-        #{'*' * 66}~ unless ChinaAqi.token
+        #{'*' * 66}) unless ChinaAqi.token
       @token = ChinaAqi.token
     end
 
     def self.get(*args)
-      self.new(*args).get
+      new(*args).get
     end
   end
 
@@ -64,7 +64,7 @@ module ChinaAqi
   class DynamicBase < Base
     attr_accessor :city
 
-    def initialize(city, querys = {avg: true, stations: :yes})
+    def initialize(city, querys={ avg: true, stations: :yes })
       super
       @city = city
       @parmas = querys.merge(city: city, token: ChinaAqi.token)

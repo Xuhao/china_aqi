@@ -4,5 +4,6 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in china_aqi.gemspec
 gemspec
 
-gem 'rake', group: :test
 gem 'coveralls', require: false
+gem 'rubocop', require: false
+gem 'rubocop-rspec'

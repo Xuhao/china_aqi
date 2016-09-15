@@ -11,7 +11,7 @@ module ChinaAqi
       include HTTParty
       attr_accessor :parmas
       class_attribute :base_uri, :method
-      self.base_uri = URI::HTTP.build({host: 'www.pm25.in'})
+      self.base_uri = URI::HTTP.build(host: 'www.pm25.in')
     end
 
     def get
@@ -20,7 +20,7 @@ module ChinaAqi
 
     def uri
       raise NotImplementedError, "Please set value for 'method' class attributes in '#{self.class.name}' class." unless self.class.method
-      self.class.base_uri.path = "/api/querys/#{self.class.method.to_s}.json"
+      self.class.base_uri.path = "/api/querys/#{self.class.method}.json"
       self.class.base_uri.query = @parmas.to_query
       self.class.base_uri
     end

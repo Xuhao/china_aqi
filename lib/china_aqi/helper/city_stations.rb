@@ -9,6 +9,6 @@ module ChinaAqi
   def get_stations_for_city(city)
     CityStations.new(city).get
   end
-  
+
   module_function :get_stations_for_city
 end

@@ -1,4 +1,4 @@
-require "china_aqi/version"
+require 'china_aqi/version'
 module ChinaAqi
   def self.token
     @token ||= begin

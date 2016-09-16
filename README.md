@@ -22,6 +22,13 @@ All monitoring stations in most cities of China are available, most AQI data are
 About PM2.5 reporting from U.S. Consulate please check out: [pm25
 ](https://github.com/ekohe/pm25)
 
+## Requirements
+  CRuby 1.9.3 or greater, 2.2+ recommended. JRuby not sure.
+
+  * Rails 3 (not sure)
+  * Rails 4
+  * Rails 5
+
 ## Installation
 
 Add this line to your application's Gemfile:

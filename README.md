@@ -22,12 +22,13 @@ All monitoring stations in most cities of China are available, most AQI data are
 About PM2.5 reporting from U.S. Consulate please check out: [pm25
 ](https://github.com/ekohe/pm25)
 
-## Requirements
+## Compatibility
   CRuby 1.9.3 or greater, 2.2+ recommended. JRuby not sure.
 
+  Support for Rails:
   * Rails 3 (not sure)
-  * Rails 4
-  * Rails 5
+  * Rails 4 (tested)
+  * Rails 5 (tested)
 
 ## Installation
 
@@ -43,6 +44,8 @@ Or install it yourself as:
 
     $ gem install china_aqi
 
+### For Rails app
+
 Run install generator:
 
     $ rails generate china_aqi:install
@@ -52,8 +55,18 @@ It will add a new line in config/application.rb:
 ```ruby
 config.china_aqi_token = 'you_token_here'
 ```
+Put your token there.
 
-Put you token there.
+### For non-Rails app
+
+Just require `china_aqi` and then assign a valid token for it:
+
+```ruby
+require 'rubygems'
+require 'china_aqi'
+
+ChinaAqi.token = 'you_token_here'
+```
 
 ## Usage
 
@@ -64,7 +77,7 @@ As we mention at the beginning, we must get a token form [pm25.in][pm25_in_api] 
 Most APIs accept three params:
 
 - `city`: city name can be chinese characters, pinyin and area code('上海' or 'shanghai' or '021')
-- `avg`: true/false, optional, if true,return average for all monitoring stations, default is true.
+- `avg`: true/false, optional, if true, return average for all monitoring stations, default is true.
 - `stations`: yes/no, optional, if yes, return data for all monitoring stations; if no, just return average without stations data, default is yes.
 
 `avg` and `stations` params is optional, it will use defaut value if not set them.

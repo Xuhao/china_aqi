@@ -1,17 +1,17 @@
 require 'spec_helper'
 
+RSpec.shared_examples 'raise NotImplementedError' do |instance_method_name|
+  it "should raise NotImplementedError when call #{instance_method_name} method" do
+    ChinaAqi.token = token
+    expect { ChinaAqi::Base.new.send instance_method_name }.to raise_error(ChinaAqi::NotImplementedError, "Please set value for 'method' class attributes in 'ChinaAqi::Base' class.")
+  end
+end
+
 describe ChinaAqi do
   let(:token) { '5j1znBVAsnSf5xQyNQyq' }
 
   describe ChinaAqi::Base do
     before { ChinaAqi.token = nil }
-
-    shared_examples 'raise NotImplementedError' do |instance_method_name|
-      it "should raise NotImplementedError when call #{instance_method_name} method" do
-        ChinaAqi.token = token
-        expect { ChinaAqi::Base.new.send instance_method_name }.to raise_error(ChinaAqi::NotImplementedError, "Please set value for 'method' class attributes in 'ChinaAqi::Base' class.")
-      end
-    end
 
     it 'raise error when initial a object if there is no token' do
       expect { ChinaAqi::Base.new }.to raise_error(ChinaAqi::TokenMissingError)

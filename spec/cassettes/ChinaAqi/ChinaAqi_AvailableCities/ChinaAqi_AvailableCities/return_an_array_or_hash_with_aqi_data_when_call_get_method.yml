@@ -1,0 +1,139 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.pm25.in/api/querys.json?token=5j1znBVAsnSf5xQyNQyq
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sat, 17 Sep 2016 09:23:24 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - '200'
+      X-Powered-By:
+      - Phusion Passenger (mod_rails/mod_rack)
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"8abdf340149da9f816e9904e1619049f"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      - no-cache
+      Set-Cookie:
+      - _aqi_query_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWY3NGY1NGJkZTI2MTA0NzYxOGIxODFjNzQzOGE1NmY1BjsAVEkiHXdhcmRlbi51c2VyLmFwaV91c2VyLmtleQY7AFRbB1sGaQJCA0kiIiQyYSQxMCRYRkM0bGs4cDhXTjhWVFh1UGl5d0dPBjsAVA%3D%3D--7205a7429af649b5fb024dac45ce0a7ba018be98;
+        path=/; HttpOnly
+      X-Request-Id:
+      - d60d29eee3f209f43ebe11192db18f61
+      X-Runtime:
+      - '0.074562'
+      X-Rack-Cache:
+      - miss
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjaXRpZXMiOlsi5LiD5Y+w5rKzIiwi5LiJ5LqaIiwi5LiJ5piOIiwi5LiJ
+        6Zeo5bOhIiwi5LiK5rW3Iiwi5LiK6aW2Iiwi5Lic6I6eIiwi5Lic6JClIiwi
+        5Lit5Y2rIiwi5Lit5bGxIiwi5Li05aSP5beeIiwi5Li05a6JIiwi5Li05rG+
+        Iiwi5Li05rKCIiwi5Li05rKnIiwi5Li55LicIiwi5Li95rC0Iiwi5Li95rGf
+        Iiwi5LmJ5LmMIiwi5LmM5YWw5a+f5biDIiwi5LmM5rW3Iiwi5LmM6bKB5pyo
+        6b2QIiwi5LmQ5bGxIiwi5Lmd5rGfIiwi5Lmz5bGxIiwi5LqR5rWuIiwi5LqU
+        5a625rigIiwi5Lqz5beeIiwi5LyK5pilIiwi5LyK54qB5ZOI6JCo5YWLIiwi
+        5LyK54qB5ZOI6JCo5YWL5beeIiwi5L2b5bGxIiwi5L2z5pyo5pavIiwi5L+d
+        5a6aIiwi5L+d5bGxIiwi5L+h6ZizIiwi5YWL5beeIiwi5YWL5ouJ546b5L6d
+        Iiwi5YWt5a6JIiwi5YWt55uY5rC0Iiwi5YWw5beeIiwi5YW05a6J55ufIiwi
+        5YaF5rGfIiwi5YeJ5bGx5beeIiwi5YyF5aS0Iiwi5YyX5LqsIiwi5YyX5rW3
+        Iiwi5Y2B5aCwIiwi5Y2X5LqsIiwi5Y2X5YWFIiwi5Y2X5a6BIiwi5Y2X5bmz
+        Iiwi5Y2X5piMIiwi5Y2X6YCaIiwi5Y2X6ZizIiwi5Y2a5beeIiwi5Y2z5aKo
+        Iiwi5Y6m6ZeoIiwi5Y+M6bit5bGxIiwi5Y+l5a65Iiwi5Y+w5beeIiwi5ZCI
+        6IKlIiwi5ZCJ5a6JIiwi5ZCJ5p6XIiwi5ZCQ6bKB55Wq5Zyw5Yy6Iiwi5ZCV
+        5qKBIiwi5ZC05b+gIiwi5ZC05rGfIiwi5ZGo5Y+jIiwi5ZG85Lym6LSd5bCU
+        Iiwi5ZG85ZKM5rWp54m5Iiwi5ZKM55Sw5Zyw5Yy6Iiwi5ZK45a6BIiwi5ZK4
+        6ZizIiwi5ZOI5a+G5Zyw5Yy6Iiwi5ZOI5bCU5ruoIiwi5ZSQ5bGxIiwi5ZWG
+        5LiYIiwi5ZWG5rSbIiwi5ZaA5LuA5Zyw5Yy6Iiwi5ZiJ5YW0Iiwi5ZiJ5bOq
+        5YWzIiwi5Zub5bmzIiwi5Zu65Y6fIiwi5aGU5Z+O5Zyw5Yy6Iiwi5aSn5YW0
+        5a6J5bKt5ZywIiwi5aSn5YW05a6J5bKt5Zyw5Yy6Iiwi5aSn5ZCMIiwi5aSn
+        5bqGIiwi5aSn55CG5beeIiwi5aSn6L+eIiwi5aSp5rC0Iiwi5aSp5rSlIiwi
+        5aSq5LuTIiwi5aSq5Y6fIiwi5aiB5rW3Iiwi5aiE5bqVIiwi5a2d5oSfIiwi
+        5a6B5b63Iiwi5a6B5rOiIiwi5a6J5bqGIiwi5a6J5bq3Iiwi5a6J6ZizIiwi
+        5a6J6aG6Iiwi5a6a6KW/Iiwi5a6c5YW0Iiwi5a6c5a6+Iiwi5a6c5piMIiwi
+        5a6c5pilIiwi5a6d6bihIiwi5a6j5Z+OIiwi5a6/5beeIiwi5a6/6L+BIiwi
+        5a+M6ZizIiwi5a+/5YWJIiwi5bGx5Y2X5Zyw5Yy6Iiwi5bKz6ZizIiwi5bSH
+        5bemIiwi5be05LitIiwi5be05b2m5reW5bCUIiwi5bi45beeIiwi5bi45b63
+        Iiwi5bi454afIiwi5bmz5YeJIiwi5bmz5bqmIiwi5bmz6aG25bGxIiwi5bm/
+        5YWDIiwi5bm/5a6JIiwi5bm/5beeIiwi5bqG6ZizIiwi5bqT5bCU5YuSIiwi
+        5buK5Z2KIiwi5bu25a6JIiwi5bu26L655beeIiwi5byA5bCBIiwi5byg5a62
+        5Y+jIiwi5byg5a625rivIiwi5byg5a6255WMIiwi5byg5o6WIiwi5b6Q5bee
+        Iiwi5b635a6P5beeIiwi5b635beeIiwi5b636ZizIiwi5b+75beeIiwi5oCA
+        5YyWIiwi5oCS5rGf5beeIiwi5oGp5pa95beeIiwi5oOg5beeIiwi5oiQ6YO9
+        Iiwi5oms5beeIiwi5om/5b63Iiwi5oqa5beeIiwi5oqa6aG6Iiwi5ouJ6JCo
+        Iiwi5oub6L+cIiwi5o+t6ZizIiwi5pSA5p6d6IqxIiwi5paH5bGx5beeIiwi
+        5paH55m7Iiwi5paw5LmhIiwi5paw5L2ZIiwi5peg6ZShIiwi5pel5ZaA5YiZ
+        5Zyw5Yy6Iiwi5pel54WnIiwi5piG5bGxIiwi5piG5piOIiwi5piM5ZCJ5bee
+        Iiwi5piM6YO95Zyw5Yy6Iiwi5pit6YCaIiwi5pmL5LitIiwi5pmL5Z+OIiwi
+        5pmu5rSxIiwi5pmv5b636ZWHIiwi5puy6Z2WIiwi5pyU5beeIiwi5pyd6Ziz
+        Iiwi5pys5rqqIiwi5p2l5a6+Iiwi5p2t5beeIiwi5p2+5Y6fIiwi5p6X6Iqd
+        5Zyw5Yy6Iiwi5p6c5rSb5beeIiwi5p6j5bqEIiwi5p+z5beeIiwi5qCq5rSy
+        Iiwi5qGC5p6XIiwi5qKF5beeIiwi5qKn5beeIiwi5qWa6ZuE5beeIiwi5qaG
+        5p6XIiwi5q2m5aiBIiwi5q2m5rGJIiwi5q+V6IqCIiwi5rC45beeIiwi5rGJ
+        5LitIiwi5rGV5aS0Iiwi5rGV5bC+Iiwi5rGf6ZeoIiwi5rGf6Zi0Iiwi5rGg
+        5beeIiwi5rKI6ZizIiwi5rKn5beeIiwi5rKz5rGgIiwi5rKz5rqQIiwi5rOJ
+        5beeIiwi5rOw5a6JIiwi5rOw5beeIiwi5rO45beeIiwi5rSb6ZizIiwi5rWO
+        5Y2XIiwi5rWO5a6BIiwi5rW35Lic5Zyw5Yy6Iiwi5rW35YyX5beeIiwi5rW3
+        5Y2X5beeIiwi5rW35Y+jIiwi5rW36KW/5beeIiwi5rW36ZeoIiwi5reE5Y2a
+        Iiwi5reu5YyXIiwi5reu5Y2XIiwi5reu5a6JIiwi5rex5ZyzIiwi5riF6L+c
+        Iiwi5rip5beeIiwi5rit5Y2XIiwi5rmW5beeIiwi5rmY5r2tIiwi5rmY6KW/
+        5beeIiwi5rmb5rGfIiwi5rqn6ZizIiwi5ruB5beeIiwi5ruo5beeIiwi5ryv
+        5rKzIiwi5ryz5beeIiwi5r2N5Z2KIiwi5r2u5beeIiwi5r+u6ZizIiwi54Of
+        5Y+wIiwi54Sm5L2cIiwi54mh5Li55rGfIiwi546J5p6XIiwi546J5qCR5bee
+        Iiwi546J5rqqIiwi54+g5rW3Iiwi55Om5oi/5bqXIiwi55SY5Y2X5beeIiwi
+        55SY5a2c5beeIiwi55m95Z+OIiwi55m95bGxIiwi55m96ZO2Iiwi55m+6Imy
+        Iiwi55uK6ZizIiwi55uQ5Z+OIiwi55uY6ZSmIiwi55yJ5bGxIiwi55+z5Zi0
+        5bGxIiwi55+z5a625bqEIiwi55+z5rKz5a2QIiwi56aP5beeIiwi56em55qH
+        5bKbIiwi56ug5LiYIiwi57qi5rKz5beeIiwi57uN5YW0Iiwi57ul5YyWIiwi
+        57u16ZizIiwi6IGK5Z+OIiwi6IKH5bqGIiwi6IO25Y2XIiwi6IO25beeIiwi
+        6Ieq6LShIiwi6Iif5bGxIiwi6Iqc5rmWIiwi6IuP5beeIiwi6IyC5ZCNIiwi
+        6I2G5beeIiwi6I2G6ZeoIiwi6I2j5oiQIiwi6I6G55SwIiwi6I6x5beeIiwi
+        6I6x6IqcIiwi6I6x6KW/Iiwi6I+P5rO9Iiwi6JCN5LmhIiwi6JCl5Y+jIiwi
+        6JGr6Iqm5bKbIiwi6JOs6I6xIiwi6JqM5Z+gIiwi6KGh5rC0Iiwi6KGh6Ziz
+        Iiwi6KGi5beeIiwi6KWE6ZizIiwi6KW/5Y+M54mI57qz5beeIiwi6KW/5a6B
+        Iiwi6KW/5a6JIiwi6K645piMIiwi6K+45pqoIiwi6LS15rivIiwi6LS16Ziz
+        Iiwi6LS65beeIiwi6LWE6ZizIiwi6LWj5beeIiwi6LWk5bOwIiwi6L695rqQ
+        Iiwi6L696ZizIiwi6L6+5beeIiwi6L+Q5Z+OIiwi6L+e5LqR5rivIiwi6L+q
+        5bqG5beeIiwi6YCa5YyWIiwi6YCa6L69Iiwi6YGC5a6BIiwi6YG15LmJIiwi
+        6YKi5Y+wIiwi6YKj5puy5Zyw5Yy6Iiwi6YKv6YO4Iiwi6YK16ZizIiwi6YOR
+        5beeIiwi6YO05beeIiwi6YSC5bCU5aSa5pavIiwi6YSC5beeIiwi6YWS5rOJ
+        Iiwi6YeN5bqGIiwi6YeR5Y2OIiwi6YeR5Z2bIiwi6YeR5piMIiwi6ZKm5bee
+        Iiwi6ZOB5bKtIiwi6ZOc5LuB5Zyw5Yy6Iiwi6ZOc5bedIiwi6ZOc6Zm1Iiwi
+        6ZO25bedIiwi6ZSh5p6X6YOt5YuS55ufIiwi6ZSm5beeIiwi6ZWH5rGfIiwi
+        6ZW/5pilIiwi6ZW/5rKZIiwi6ZW/5rK7Iiwi6Zic5pawIiwi6Zic6ZizIiwi
+        6Ziy5Z+O5rivIiwi6Ziz5rGfIiwi6Ziz5rOJIiwi6Zi/5YWL6IuP5Zyw5Yy6
+        Iiwi6Zi/5YuS5rOw5Zyw5Yy6Iiwi6Zi/5Z2d5beeIiwi6Zi/5ouJ5ZaE55uf
+        Iiwi6Zi/6YeM5Zyw5Yy6Iiwi6ZmH5Y2XIiwi6ZqP5beeIiwi6ZuF5a6JIiwi
+        6Z2S5bKbIiwi6Z6N5bGxIiwi6Z+25YWzIiwi6ams6Z6N5bGxIiwi6am76ams
+        5bqXIiwi6bih6KW/Iiwi6bmk5aOBIiwi6bmk5bKXIiwi6bmw5r2tIiwi6buE
+        5YaIIiwi6buE5Y2X5beeIiwi6buE5bGxIiwi6buE55+zIiwi6buR5rKzIiwi
+        6buU5Lic5Y2X5beeIiwi6buU5Y2X5beeIiwi6buU6KW/5Y2X5beeIiwi6b2Q
+        6b2Q5ZOI5bCUIiwi6b6Z5bKpIl19
+    http_version: 
+  recorded_at: Sat, 17 Sep 2016 09:23:24 GMT
+recorded_with: VCR 3.0.3

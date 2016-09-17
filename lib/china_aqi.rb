@@ -16,3 +16,4 @@ end
 require 'china_aqi/base'
 require 'china_aqi/exceptions'
 require 'china_aqi/helper/city_stations'
+require 'china_aqi/helper/available_cities'

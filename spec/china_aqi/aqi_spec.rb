@@ -3,16 +3,18 @@ require 'spec_helper'
 
 RSpec.shared_examples 'common examples' do |klass, obj|
   context klass.name do
+    let(:method) { klass.method.to_s.include?('/') ? klass.method : "/querys/#{klass.method}" }
+
     it 'return URI::HTTP object own context when call `uri` method' do
       uri = obj.uri
       expect(uri).to be_a(URI::HTTP)
       expect(uri.host).to eq('www.pm25.in')
-      expect(uri.path).to eq("/api/querys/#{klass.method}.json")
+      expect(uri.path).to eq("/api#{method}.json")
     end
 
     it 'return url string with own context when call `url` method' do
       expect(obj.url).to be_a(String)
-      expect(obj.url).to include("http://www.pm25.in/api/querys/#{klass.method}.json")
+      expect(obj.url).to include("http://www.pm25.in/api#{method}.json")
     end
 
     it 'return an array or hash with aqi data when call `get` method' do
@@ -95,6 +97,25 @@ describe ChinaAqi, :vcr do
       expect(stations).to have_key('stations')
       expect(stations['stations']).to be_a(Array)
       expect(stations['city']).to eq('上海')
+    end
+  end
+
+  describe ChinaAqi::AvailableCities do
+    include_examples 'common examples', ChinaAqi::AvailableCities, ChinaAqi::AvailableCities.new
+    include_examples 'class attribute', ChinaAqi::AvailableCities, '/querys'
+
+    it 'have module function called available_cities to get all available cities' do
+      cities = ChinaAqi.available_cities
+      expect(cities).to be_a(Hash)
+      expect(cities['cities']).to be_a(Array)
+      expect(cities['cities']).to include('上海')
+    end
+
+    it 'return a hash with aqi data when call `get` instance method' do
+      cities = ChinaAqi::AvailableCities.new.get
+      expect(cities).to be_a(Hash)
+      expect(cities['cities']).to be_a(Array)
+      expect(cities['cities']).to include('上海')
     end
   end
 end

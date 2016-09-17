@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.pm25.in/api/querys/aqi_ranking.json?token=5j1znBVAsnSf5xQyNQyq
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sat, 17 Sep 2016 08:02:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - '200'
+      X-Powered-By:
+      - Phusion Passenger (mod_rails/mod_rack)
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"561f8f04728019a592819c1d4ea01c00"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      - no-cache
+      Set-Cookie:
+      - _aqi_query_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWEyZjY1NTc1ZjU5NzcxMDA5OTUwYjk1MzQ5ZjY0ODAyBjsAVEkiHXdhcmRlbi51c2VyLmFwaV91c2VyLmtleQY7AFRbB1sGaQJCA0kiIiQyYSQxMCRYRkM0bGs4cDhXTjhWVFh1UGl5d0dPBjsAVA%3D%3D--7eadf550243d72224ebe102dcc2a99c341c980e9;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 139e25ccef9ee7c5d6f619795f53fbbf
+      X-Runtime:
+      - '0.019629'
+      X-Rack-Cache:
+      - miss
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJlcnJvciI6IlNvcnJ577yM5oKo6L+Z5Liq5bCP5pe25YaF55qEQVBJ6K+3
+        5rGC5qyh5pWw55So5a6M5LqG77yM5LyR5oGv5LiA5LiL5ZCn77yBIn0=
+    http_version: 
+  recorded_at: Sat, 17 Sep 2016 08:02:11 GMT
+recorded_with: VCR 3.0.3

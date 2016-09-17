@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.pm25.in/api/querys/aqis_by_station.json?station_code=1141A&token=5j1znBVAsnSf5xQyNQyq
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sat, 17 Sep 2016 08:02:16 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - '200'
+      X-Powered-By:
+      - Phusion Passenger (mod_rails/mod_rack)
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"3baf7b6a87298d3412df7415e88f7eae"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      - no-cache
+      Set-Cookie:
+      - _aqi_query_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTA5MzQ4ZWU4ODAwYzA4ZjQ3MjM0ZWQ2YjIyNzYzY2RkBjsAVEkiHXdhcmRlbi51c2VyLmFwaV91c2VyLmtleQY7AFRbB1sGaQJCA0kiIiQyYSQxMCRYRkM0bGs4cDhXTjhWVFh1UGl5d0dPBjsAVA%3D%3D--79f35db63343680ee015235fc15d30117eabf17c;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 16110fa33b01f0b5a447c748706a682a
+      X-Runtime:
+      - '0.056912'
+      X-Rack-Cache:
+      - miss
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3siYXFpIjoyNywiYXJlYSI6IuS4iua1tyIsImNvIjowLjQsImNvXzI0aCI6
+        MC41LCJubzIiOjE3LCJubzJfMjRoIjoyNCwibzMiOjg1LCJvM18yNGgiOjg1
+        LCJvM184aCI6NjMsIm8zXzhoXzI0aCI6NjMsInBtMTAiOjI2LCJwbTEwXzI0
+        aCI6MjcsInBtMl81IjozLCJwbTJfNV8yNGgiOjEzLCJwb3NpdGlvbl9uYW1l
+        Ijoi5pmu6ZmAIiwicHJpbWFyeV9wb2xsdXRhbnQiOm51bGwsInF1YWxpdHki
+        OiLkvJgiLCJzbzIiOjksInNvMl8yNGgiOjExLCJzdGF0aW9uX2NvZGUiOiIx
+        MTQxQSIsInRpbWVfcG9pbnQiOiIyMDE2LTA5LTE3VDE1OjAwOjAwWiJ9XQ==
+    http_version: 
+  recorded_at: Sat, 17 Sep 2016 08:02:16 GMT
+recorded_with: VCR 3.0.3

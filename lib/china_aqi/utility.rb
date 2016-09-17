@@ -21,7 +21,8 @@ module ChinaAqi
 
     def uri
       raise NotImplementedError, "Please set value for 'method' class attributes in '#{self.class.name}' class." unless self.class.method
-      self.class.base_uri.path = "/api/querys/#{self.class.method}.json"
+      method = self.class.method.to_s.include?('/') ? self.class.method : "/querys/#{self.class.method}"
+      self.class.base_uri.path = "/api#{method}.json"
       self.class.base_uri.query = @parmas.to_query
       self.class.base_uri
     end

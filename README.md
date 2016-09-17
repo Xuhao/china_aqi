@@ -178,7 +178,11 @@ ChinaAqi.get_stations_for_city('shanghai')
 ChinaAqi.get_stations_for_city('021')
 # same as:
 ChinaAqi::CityStations.get('上海/shanghai/021')
-# {"city"=>"上海", "stations"=>[{"station_name"=>"普陀" ..
+# {"city"=>"上海", "stations"=>[{"station_name"=>"普陀" ...
+
+# Get the list for cities which have AQI data.
+ChinaAqi.available_cities
+# {"cities"=>["七台河", "三亚", "三明", "三门峡" ...
 ```
 
 ## Contributing

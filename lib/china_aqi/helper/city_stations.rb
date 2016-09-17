@@ -1,4 +1,3 @@
-require 'china_aqi/utility'
 module ChinaAqi
   # All monitoring station names in one city
   class CityStations < DynamicBase

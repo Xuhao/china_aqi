@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.pm25.in/api/querys/station_names.json?avg=true&city=shanghai&stations=yes&token=5j1znBVAsnSf5xQyNQyq
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sat, 17 Sep 2016 08:02:27 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - '200'
+      X-Powered-By:
+      - Phusion Passenger (mod_rails/mod_rack)
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"2acebf4b51708fbc64cbbcbd61ccbcda"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      - no-cache
+      Set-Cookie:
+      - _aqi_query_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWVlNzRkZWM2NDQ4OWVhYTFhYjRjY2UzYmVkZjVkNGVmBjsAVEkiHXdhcmRlbi51c2VyLmFwaV91c2VyLmtleQY7AFRbB1sGaQJCA0kiIiQyYSQxMCRYRkM0bGs4cDhXTjhWVFh1UGl5d0dPBjsAVA%3D%3D--a7a4d9cf862207498ee3760862ff97b8c6bef0c9;
+        path=/; HttpOnly
+      X-Request-Id:
+      - d6c8a0f8ae4f847a76f929217bbac9af
+      X-Runtime:
+      - '0.060673'
+      X-Rack-Cache:
+      - miss
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjaXR5Ijoi5LiK5rW3Iiwic3RhdGlvbnMiOlt7InN0YXRpb25fbmFtZSI6
+        IuWNgeS6lOWOgiIsInN0YXRpb25fY29kZSI6IjExNDJBIn0seyJzdGF0aW9u
+        X25hbWUiOiLombnlj6MiLCJzdGF0aW9uX2NvZGUiOiIxMTQzQSJ9LHsic3Rh
+        dGlvbl9uYW1lIjoi5b6Q5rGH5LiK5biI5aSnIiwic3RhdGlvbl9jb2RlIjoi
+        MTE0NEEifSx7InN0YXRpb25fbmFtZSI6IuadqOa1puWbm+a8giIsInN0YXRp
+        b25fY29kZSI6IjExNDVBIn0seyJzdGF0aW9uX25hbWUiOiLpnZLmtabmt4Dl
+        sbHmuZYiLCJzdGF0aW9uX2NvZGUiOiIxMTQ2QSJ9LHsic3RhdGlvbl9uYW1l
+        Ijoi6Z2Z5a6J55uR5rWL56uZIiwic3RhdGlvbl9jb2RlIjoiMTE0N0EifSx7
+        InN0YXRpb25fbmFtZSI6Iua1puS4nOW3neaymSIsInN0YXRpb25fY29kZSI6
+        IjExNDhBIn0seyJzdGF0aW9uX25hbWUiOiLmtabkuJzmlrDljLrnm5HmtYvn
+        q5kiLCJzdGF0aW9uX2NvZGUiOiIxMTQ5QSJ9LHsic3RhdGlvbl9uYW1lIjoi
+        5rWm5Lic5byg5rGfIiwic3RhdGlvbl9jb2RlIjoiMTE1MEEifSx7InN0YXRp
+        b25fbmFtZSI6IuaZrumZgCIsInN0YXRpb25fY29kZSI6IjExNDFBIn1dfQ==
+    http_version: 
+  recorded_at: Sat, 17 Sep 2016 08:02:27 GMT
+recorded_with: VCR 3.0.3

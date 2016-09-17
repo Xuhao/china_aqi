@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.pm25.in/api/querys/pm2_5.json?avg=true&city=shanghai&stations=yes&token=5j1znBVAsnSf5xQyNQyq
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sat, 17 Sep 2016 08:02:08 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - '200'
+      X-Powered-By:
+      - Phusion Passenger (mod_rails/mod_rack)
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"561f8f04728019a592819c1d4ea01c00"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      - no-cache
+      Set-Cookie:
+      - _aqi_query_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWI3ZjVlMDJkMTA2NTdmMzNjNWQ1ZDg0YjQwZjEyZDAyBjsAVEkiHXdhcmRlbi51c2VyLmFwaV91c2VyLmtleQY7AFRbB1sGaQJCA0kiIiQyYSQxMCRYRkM0bGs4cDhXTjhWVFh1UGl5d0dPBjsAVA%3D%3D--da33dfa77f8b09780c6b58d3073ad8ce32f60907;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 02c84562fad363f3d9ee7eb6df04bc01
+      X-Runtime:
+      - '0.019627'
+      X-Rack-Cache:
+      - miss
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJlcnJvciI6IlNvcnJ577yM5oKo6L+Z5Liq5bCP5pe25YaF55qEQVBJ6K+3
+        5rGC5qyh5pWw55So5a6M5LqG77yM5LyR5oGv5LiA5LiL5ZCn77yBIn0=
+    http_version: 
+  recorded_at: Sat, 17 Sep 2016 08:02:08 GMT
+recorded_with: VCR 3.0.3

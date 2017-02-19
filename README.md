@@ -6,9 +6,9 @@
 [![Dependency Status](https://gemnasium.com/Xuhao/china_aqi.png)](https://gemnasium.com/Xuhao/china_aqi)
 [![Coverage Status](https://coveralls.io/repos/Xuhao/china_aqi/badge.png?branch=master)](https://coveralls.io/r/Xuhao/china_aqi?branch=master)
 
-China Air Quality Index API for Ruby. Thanks [pm25.in][pm25_in] for provide all the AQI sources for us as free, all the data is form China's official sector. it's a reall gread work! ChinaAqi gem provide some interface base on Ruby On Rails, before to use it, you need ask for a token form [pm25.in][pm25_in_api].
+China Air Quality Index API for Ruby. Thanks [pm25.in][pm25_in] for providing all the AQI data to us for free. All the data is form China's official sector. It's a reall gread work! ChinaAqi gem provides some interface based on Ruby On Rails. Before using it, you need to ask for a token form [pm25.in][pm25_in_api].
 
-All monitoring stations in most cities of China are available, most AQI data are available, they are:
+ AQI data from all monitoring stations in the majority of cities are available:
 
   - **CO**: 一氧化碳
   - **NO2**: 二氧化氮
@@ -70,13 +70,13 @@ ChinaAqi.token = 'you_token_here'
 
 ## Usage
 
-As we mention at the beginning, we must get a token form [pm25.in][pm25_in_api] before we use their APIs, it's free!
+As we mentioned at the beginning, we must get a token form [pm25.in][pm25_in_api] before using this API. It's free!
 
 ### Parameters
 
-Most APIs accept three params:
+Most APIs accept three parameters:
 
-- `city`: city name can be chinese characters, pinyin and area code('上海' or 'shanghai' or '021')
+- `city`: city name can be chinese characters, pinyin or area code('上海' or 'shanghai' or '021')
 - `avg`: true/false, optional, if true, return average for all monitoring stations, default is true.
 - `stations`: yes/no, optional, if yes, return data for all monitoring stations; if no, just return average without stations data, default is yes.
 

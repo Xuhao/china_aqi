@@ -23,7 +23,9 @@ About PM2.5 reporting from U.S. Consulate please check out: [pm25
 ](https://github.com/ekohe/pm25)
 
 ## Compatibility
-  CRuby 1.9.3 or greater, 2.2+ recommended. JRuby not sure.
+  MRI(aka CRuby) 2.0 or greater, 2.2+ recommended, JRuby not sure.
+
+  **For MRI 1.9, please use [v0.0.5](https://github.com/Xuhao/china_aqi/tree/v0.0.5).**
 
   Support for Rails:
   * Rails 3 (not sure)
